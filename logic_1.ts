@@ -1,3 +1,21 @@
+/*
+Your Backend Logic Problem: Day 1
+
+Topic: Data Validation (The most important job of a Backend Developer).
+
+The Scenario:
+You are building the "Registration" part of your Task Manager. A user sends you their username and age to save in MongoDB. But you cannot trust the user! You must check the data before it touches your database.
+
+The Task:
+Write a function called validateUser that takes an object.
+
+If the username is empty or less than 3 characters, return "Invalid Username".
+
+If the age is not a number or is less than 18, return "Too Young".
+
+If everything is okay, return "User Validated".
+ */
+
 interface userDataT {
   userName: string;
   age: number;
