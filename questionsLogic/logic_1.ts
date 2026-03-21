@@ -30,3 +30,4 @@ const validateUser = (userData: userDataT) => {
 
 console.log(validateUser({ userName: "Ab", age: 25 }));
 console.log(validateUser({ userName: "Anu", age: 15 }));
+console.log(validateUser({ userName: "Anu", age: 65 }));
