@@ -41,3 +41,49 @@ const getUsername = (user) => user.name || "guest";
 
 ?? (Nullish Coalescing): Returns "guest" only if user.name is null or undefined.
  */
+
+/*
+Muscle Memory Drill: The "Categorizer"
+
+Imagine you need to group those products by their category so you can display them in different sections of a website.
+ */
+
+const grouped = products.reduce((acc, product) => {
+  const { category, name } = product;
+
+  //1.check if teh specific category [tech] exists in our acc
+  if (!acc[category]) {
+    acc[category] = []; //create. anew empty drawer for the tech
+  }
+
+  //2.Push that product name into that category array
+  acc[category].push(name); //put laptop into tech drawer
+
+  //always return th eacc
+  return acc;
+}, {});
+
+console.log(grouped);
+
+/*
+......Answer....
+{
+tech: ["Laptop", "Phone"],
+fashion: ["Shirt", "Shoes"]
+}
+ */
+
+//count the occurance of each fruit
+const fruits = ["apple", "orange", "apple", "banana", "apple", "orange"];
+
+const fruitCount = fruits.reduce((acc, fruit) => {
+  if (!acc[fruit]) {
+    acc[fruit] = 0;
+  }
+  acc[fruit] += 1;
+  return acc;
+}, {});
+
+console.log(fruitCount);
+
+//
